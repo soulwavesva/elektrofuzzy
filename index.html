@@ -33,7 +33,7 @@
       <!-- Right Buttons / Contact (Desktop) & Hamburger Menu (Mobile) -->
       <div class="flex items-center gap-4 relative z-[60]">
         <a href="tel:06767056970" class="hidden md:block font-serif text-[#FFD700] text-lg hover:text-white transition-colors drop-shadow-md">0676 / 70 569 70</a>
-        <a href="#kontakt" class="border border-[#FFD700] text-[#FFD700] hover:bg-[#FFD700] hover:text-[#050505] px-5 py-2 rounded-sm text-sm uppercase tracking-widest transition-all duration-300 drop-shadow-md font-semibold font-sans">Jetzt anfragen</a>
+        <a href="#kontakt" class="border border-[#FFD700] text-[#FFD700] hover:bg-[#FFD700] hover:text-[#050505] px-2 py-1 md:px-5 md:py-2 rounded-sm text-[10px] md:text-sm uppercase tracking-widest transition-all duration-300 drop-shadow-md font-semibold font-sans whitespace-nowrap">Jetzt anfragen</a>
         
         <!-- Mobile Hamburger Toggle -->
         <button id="mobile-menu-btn" class="lg:hidden ml-2 text-white hover:text-[#FFD700] focus:outline-none transition-colors" aria-label="Menü öffnen">
@@ -68,21 +68,21 @@
     <!-- Scrollytelling Content -->
     <main class="relative z-10 font-sans shadow-text text-white/95 leading-relaxed">
       <!-- 6 Sections, expanding height so frames pan over it appropriately -->
-      <div class="scrolly-container max-w-7xl mx-auto px-6 md:px-12 w-full flex flex-col pt-[15vh]">
+      <div class="scrolly-container max-w-7xl mx-auto px-6 md:px-12 w-full flex flex-col gap-16 md:gap-0 pt-28 md:pt-[15vh] pb-12 md:pb-0">
         
         <!-- SECTION 1: HERO (Start) -->
-        <section id="start" class="beat min-h-[100vh] flex flex-col justify-center items-start md:w-3/5 scroll-mt-[100px] md:scroll-mt-[120px]">
-          <div class="glass-panel p-8 md:p-12 rounded-lg opacity-0 transform translate-y-10 transition-all duration-700 ease-out" data-beat="A">
-            <h1 class="text-5xl md:text-7xl font-serif text-[#FFD700] mb-4 leading-tight">Elektrotechnik mit Handschlagqualität.</h1>
-            <p class="text-xl md:text-2xl font-light mb-4 drop-shadow-md">Ihr konzessionierter Elektrofachbetrieb in Niederösterreich mit Einsatzgebiet in Wien und Umgebung.</p>
-            <p class="text-white/80 text-lg font-light mb-8 italic drop-shadow-md">Bei uns ist der Kunde noch immer König.</p>
+        <section id="start" class="beat md:min-h-[100vh] flex flex-col justify-center items-start md:w-3/5 scroll-mt-[100px] md:scroll-mt-[120px]">
+          <div class="glass-panel p-4 sm:p-6 md:p-12 rounded-lg opacity-0 transform translate-y-10 transition-all duration-700 ease-out" data-beat="A">
+            <h1 class="text-3xl sm:text-4xl md:text-7xl font-serif text-[#FFD700] mb-3 md:mb-4 leading-tight">Elektrotechnik mit Handschlagqualität.</h1>
+            <p class="text-lg md:text-2xl font-light mb-4 drop-shadow-md">Ihr konzessionierter Elektrofachbetrieb in Niederösterreich mit Einsatzgebiet in Wien und Umgebung.</p>
+            <p class="text-white/80 text-base md:text-lg font-light mb-6 md:mb-8 italic drop-shadow-md">Bei uns ist der Kunde noch immer König.</p>
             
-            <div class="flex flex-col sm:flex-row gap-4 mb-8">
+            <div class="flex flex-col sm:flex-row gap-3 md:gap-4 mb-6 md:mb-8">
               <a href="#kontakt" class="bg-[#FFD700] text-[#050505] px-6 py-3 rounded-sm text-sm uppercase tracking-widest text-center font-bold hover:bg-white transition-colors">Jetzt anfragen</a>
               <a href="#leistungen" class="border border-white/50 text-white hover:border-white px-6 py-3 rounded-sm text-sm uppercase tracking-widest text-center transition-colors drop-shadow-md">Leistungen ansehen</a>
             </div>
 
-            <div class="border-t border-[rgba(255,200,80,0.3)] pt-6 space-y-2 text-sm text-white/90 drop-shadow-md">
+            <div class="border-t border-[rgba(255,200,80,0.3)] pt-5 md:pt-6 space-y-2 text-xs md:text-sm text-white/90 drop-shadow-md">
               <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#FFD700] shadow-[0_0_5px_#FFD700]"></span> Konzessionierter Fachbetrieb</p>
               <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#FFD700] shadow-[0_0_5px_#FFD700]"></span> Einsatzgebiet Wien & Niederösterreich</p>
               <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#FFD700] shadow-[0_0_5px_#FFD700]"></span> Kostenlose technische Beratung</p>
@@ -91,46 +91,46 @@
         </section>
 
         <!-- SECTION 2: LEISTUNGEN -->
-        <section id="leistungen" class="beat min-h-[100vh] flex flex-col justify-center items-end md:ml-auto md:w-2/3 text-right scroll-mt-[100px] md:scroll-mt-[120px]">
-          <div class="glass-panel p-8 md:p-12 rounded-lg opacity-0 transform translate-y-10 transition-all duration-700 ease-out relative" data-beat="B">
+        <section id="leistungen" class="beat md:min-h-[100vh] flex flex-col justify-center items-start md:items-end md:ml-auto md:w-2/3 text-left md:text-right scroll-mt-[100px] md:scroll-mt-[120px]">
+          <div class="glass-panel p-6 md:p-12 rounded-lg opacity-0 transform translate-y-10 transition-all duration-700 ease-out relative w-full" data-beat="B">
             <!-- Seal of Quality Mascot -->
-            <img src="/Lampe1_neu.png" alt="Elektrofuzzy Maskottchen" class="absolute -top-12 -right-4 w-[120px] opacity-85 select-none pointer-events-none drop-shadow-lg" />
+            <img src="/Lampe1_neu.png" alt="Elektrofuzzy Maskottchen" class="hidden md:block absolute -top-12 -right-4 w-[120px] opacity-85 select-none pointer-events-none drop-shadow-lg" />
             
-            <h2 class="text-4xl md:text-6xl font-serif text-[#FFD700] mb-6 drop-shadow-md">Unsere Leistungen</h2>
-            <p class="text-xl md:text-2xl font-light mb-8 drop-shadow-md text-white/95">Von klassischer Elektroinstallation bis zu modernen Photovoltaikanlagen übernehmen wir Arbeiten für Wohnungen, Häuser, Büros und Gewerbe.</p>
+            <h2 class="text-4xl md:text-6xl font-serif text-[#FFD700] mb-5 md:mb-6 drop-shadow-md">Unsere Leistungen</h2>
+            <p class="text-lg md:text-2xl font-light mb-6 md:mb-8 drop-shadow-md text-white/95">Von klassischer Elektroinstallation bis zu modernen Photovoltaikanlagen übernehmen wir Arbeiten für Wohnungen, Häuser, Büros und Gewerbe.</p>
             
-            <ul class="text-lg text-white/90 font-light mb-8 space-y-3 drop-shadow-md">
-              <li class="flex items-center justify-end gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[#FFD700]"></span> Haus-, Wohnungs- und Büroinstallationen</li>
-              <li class="flex items-center justify-end gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[#FFD700]"></span> EDV-Verkabelung bis CAT 7</li>
-              <li class="flex items-center justify-end gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[#FFD700]"></span> Gegensprechanlagen analog und digital</li>
-              <li class="flex items-center justify-end gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[#FFD700]"></span> Abspannungen für Hausanschlüsse</li>
-              <li class="flex items-center justify-end gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[#FFD700]"></span> Elektrische Verkabelungsarbeiten</li>
-              <li class="flex items-center justify-end gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[#FFD700]"></span> Wartung und Störungsdienst</li>
-              <li class="flex items-center justify-end gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[#FFD700]"></span> Photovoltaikanlagen</li>
-              <li class="flex items-center justify-end gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[#FFD700]"></span> Einschätzung bestehender Elektroanlagen</li>
+            <ul class="text-base md:text-lg text-white/90 font-light mb-6 md:mb-8 space-y-3 drop-shadow-md">
+              <li class="flex items-center justify-start md:justify-end gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#FFD700]"></span> Haus-, Wohnungs- und Büroinstallationen</li>
+              <li class="flex items-center justify-start md:justify-end gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#FFD700]"></span> EDV-Verkabelung bis CAT 7</li>
+              <li class="flex items-center justify-start md:justify-end gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#FFD700]"></span> Gegensprechanlagen analog und digital</li>
+              <li class="flex items-center justify-start md:justify-end gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#FFD700]"></span> Abspannungen für Hausanschlüsse</li>
+              <li class="flex items-center justify-start md:justify-end gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#FFD700]"></span> Elektrische Verkabelungsarbeiten</li>
+              <li class="flex items-center justify-start md:justify-end gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#FFD700]"></span> Wartung und Störungsdienst</li>
+              <li class="flex items-center justify-start md:justify-end gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#FFD700]"></span> Photovoltaikanlagen</li>
+              <li class="flex items-center justify-start md:justify-end gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#FFD700]"></span> Einschätzung bestehender Elektroanlagen</li>
             </ul>
           </div>
         </section>
 
         <!-- SECTION 3: BERATUNG -->
-        <section id="beratung" class="beat min-h-[100vh] flex flex-col justify-center items-start md:w-[60%] scroll-mt-[100px] md:scroll-mt-[120px]">
-          <div class="glass-panel p-8 md:p-12 rounded-lg opacity-0 transform translate-y-10 transition-all duration-700 ease-out" data-beat="C">
+        <section id="beratung" class="beat md:min-h-[100vh] flex flex-col justify-center items-start md:w-[60%] scroll-mt-[100px] md:scroll-mt-[120px]">
+          <div class="glass-panel p-6 md:p-12 rounded-lg opacity-0 transform translate-y-10 transition-all duration-700 ease-out w-full" data-beat="C">
             <h2 class="text-4xl md:text-6xl font-serif text-[#FFD700] mb-5 drop-shadow-md">Kostenlose technische Beratung</h2>
             
-            <div class="space-y-4 text-white/95 text-lg font-light mb-6 drop-shadow-md">
+            <div class="space-y-4 text-white/95 text-base md:text-lg font-light mb-6 drop-shadow-md">
               <p>Sie sind sich nicht sicher, welche Lösung für Ihr Projekt sinnvoll ist?</p>
               <p>Wir beraten Sie telefonisch oder schriftlich – unkompliziert und kostenlos.</p>
-              <p class="italic text-[#FFD700]">Diese Leistung ist selbstverständlich kostenlos.</p>
+              <p class="italic text-[#FFD700] text-sm md:text-base">Diese Leistung ist selbstverständlich kostenlos.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2 mb-8 text-white/80 font-light text-sm drop-shadow-md">
-              <p class="flex items-center gap-2"><span class="w-1 h-1 bg-white/50 rounded-full"></span> Elektroinstallationen in Wohnungen und Häusern</p>
-              <p class="flex items-center gap-2"><span class="w-1 h-1 bg-white/50 rounded-full"></span> Gegensprechanlagen</p>
-              <p class="flex items-center gap-2"><span class="w-1 h-1 bg-white/50 rounded-full"></span> EDV-Verkabelung</p>
-              <p class="flex items-center gap-2"><span class="w-1 h-1 bg-white/50 rounded-full"></span> Störungen bestehender Elektroanlagen</p>
-              <p class="flex items-center gap-2"><span class="w-1 h-1 bg-white/50 rounded-full"></span> Planung neuer Installationen</p>
-              <p class="flex items-center gap-2"><span class="w-1 h-1 bg-white/50 rounded-full"></span> Photovoltaikanlagen</p>
-              <p class="flex items-center gap-2"><span class="w-1 h-1 bg-white/50 rounded-full"></span> Umbau bestehender Elektroanlagen</p>
+              <p class="flex items-start gap-2"><span class="flex-shrink-0 mt-1.5 w-1 h-1 bg-white/50 rounded-full"></span> Elektroinstallationen in Wohnungen und Häusern</p>
+              <p class="flex items-start gap-2"><span class="flex-shrink-0 mt-1.5 w-1 h-1 bg-white/50 rounded-full"></span> Gegensprechanlagen</p>
+              <p class="flex items-start gap-2"><span class="flex-shrink-0 mt-1.5 w-1 h-1 bg-white/50 rounded-full"></span> EDV-Verkabelung</p>
+              <p class="flex items-start gap-2"><span class="flex-shrink-0 mt-1.5 w-1 h-1 bg-white/50 rounded-full"></span> Störungen bestehender Elektroanlagen</p>
+              <p class="flex items-start gap-2"><span class="flex-shrink-0 mt-1.5 w-1 h-1 bg-white/50 rounded-full"></span> Planung neuer Installationen</p>
+              <p class="flex items-start gap-2"><span class="flex-shrink-0 mt-1.5 w-1 h-1 bg-white/50 rounded-full"></span> Photovoltaikanlagen</p>
+              <p class="flex items-start gap-2"><span class="flex-shrink-0 mt-1.5 w-1 h-1 bg-white/50 rounded-full"></span> Umbau bestehender Elektroanlagen</p>
             </div>
 
             <a href="#kontakt" class="border border-[#FFD700] text-[#FFD700] hover:bg-[#FFD700] hover:text-[#050505] px-6 py-3 rounded-sm text-sm uppercase tracking-widest inline-block transition-colors font-semibold">Jetzt Beratung anfragen</a>
@@ -138,7 +138,7 @@
         </section>
 
         <!-- SECTION 4: TARIFE -->
-        <section id="tarife" class="beat min-h-[100vh] flex flex-col justify-center items-end md:ml-auto md:w-[55%] text-right scroll-mt-[100px] md:scroll-mt-[120px]">
+        <section id="tarife" class="beat md:min-h-[100vh] flex flex-col justify-center items-end md:ml-auto md:w-[55%] text-right scroll-mt-[100px] md:scroll-mt-[120px]">
           <div class="glass-panel p-8 md:p-12 rounded-lg opacity-0 transform translate-y-10 transition-all duration-700 ease-out" data-beat="D">
             <h2 class="text-4xl md:text-6xl font-serif text-[#FFD700] mb-8 drop-shadow-md">Klare Tarife. Faire Preise.</h2>
             
@@ -167,7 +167,7 @@
         </section>
 
         <!-- SECTION 5: ÜBER UNS -->
-        <section id="ueber-uns" class="beat min-h-[100vh] flex flex-col justify-center items-start w-full scroll-mt-[100px] md:scroll-mt-[120px]">
+        <section id="ueber-uns" class="beat md:min-h-[100vh] flex flex-col justify-center items-start w-full scroll-mt-[100px] md:scroll-mt-[120px]">
           <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16 w-full glass-panel p-8 md:p-12 rounded-lg opacity-0 transform translate-y-10 transition-all duration-700 ease-out" data-beat="E">
             
             <div class="md:w-[60%]">
@@ -190,7 +190,7 @@
         </section>
 
         <!-- SECTION 6: KONTAKT -->
-        <section id="kontakt" class="beat min-h-[90vh] flex flex-col justify-center pb-[5vh] items-center text-center scroll-mt-[100px] md:scroll-mt-[120px]">
+        <section id="kontakt" class="beat md:min-h-[90vh] flex flex-col justify-center md:pb-[5vh] items-center text-center scroll-mt-[100px] md:scroll-mt-[120px]">
           <div class="glass-panel p-8 md:p-12 rounded-lg opacity-0 transform translate-y-10 transition-all duration-700 ease-out overflow-hidden w-full max-w-4xl" data-beat="F">
             <h2 class="text-4xl md:text-6xl font-serif text-[#FFD700] mb-4 drop-shadow-md">Kontakt</h2>
             <p class="text-xl md:text-2xl text-white/95 font-light mb-8 drop-shadow-md">Schreiben Sie uns – wir melden uns verlässlich und zeitnah.</p>
