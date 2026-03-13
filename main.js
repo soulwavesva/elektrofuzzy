@@ -7,7 +7,7 @@ import './style.css';
 
 const frameCount = 111; // 000 to 110 inclusive
 const pad = (n) => n.toString().padStart(3, '0');
-const getFramePath = (index) => `/@frame/frame_${pad(index)}_delay-0.033s.jpg`;
+const getFramePath = (index) => `/frame/frame_${pad(index)}_delay-0.033s.jpg`;
 
 const canvas = document.getElementById('lightbulb-canvas');
 const context = canvas.getContext('2d', { alpha: false });
