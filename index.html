@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="de" class="bg-[#050505] scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elektrofuzzy - Elektrotechnik mit Handschlagqualität</title>
+    <!-- Old Vienna Typography Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body class="bg-[#050505] text-white font-sans antialiased selection:bg-[#FFD700] selection:text-[#050505] overscroll-none m-0 p-0 overflow-x-hidden">
+    
+    <!-- Transparent to Blurred Sticky Header -->
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50 p-4 md:px-8 transition-all duration-300 pointer-events-auto flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#start" class="flex-shrink-0 relative z-[60]">
+        <img src="/Logo.png" alt="Elektrofuzzy Logo" class="h-[56px] md:h-[120px] w-auto object-contain transition-all duration-300" />
+      </a>
+      
+      <!-- Navigation Menu -->
+      <nav class="hidden lg:flex items-center gap-6 xl:gap-8 text-sm uppercase tracking-widest font-semibold text-white/90">
+        <a href="#start" class="hover:text-[#FFD700] transition-colors drop-shadow-md">Start</a>
+        <a href="#leistungen" class="hover:text-[#FFD700] transition-colors drop-shadow-md">Leistungen</a>
+        <a href="#beratung" class="hover:text-[#FFD700] transition-colors drop-shadow-md">Beratung</a>
+        <a href="#tarife" class="hover:text-[#FFD700] transition-colors drop-shadow-md">Tarife</a>
+        <a href="#ueber-uns" class="hover:text-[#FFD700] transition-colors drop-shadow-md">Über uns</a>
+        <a href="#kontakt" class="hover:text-[#FFD700] transition-colors drop-shadow-md">Kontakt</a>
+      </nav>
+
+      <!-- Right Buttons / Contact (Desktop) & Hamburger Menu (Mobile) -->
+      <div class="flex items-center gap-4 relative z-[60]">
+        <a href="tel:06767056970" class="hidden md:block font-serif text-[#FFD700] text-lg hover:text-white transition-colors drop-shadow-md">0676 / 70 569 70</a>
+        <a href="#kontaktformular" class="border border-[#FFD700] text-[#FFD700] hover:bg-[#FFD700] hover:text-[#050505] px-5 py-2 rounded-sm text-sm uppercase tracking-widest transition-all duration-300 drop-shadow-md font-semibold font-sans">Jetzt anfragen</a>
+        
+        <!-- Mobile Hamburger Toggle -->
+        <button id="mobile-menu-btn" class="lg:hidden ml-2 text-white hover:text-[#FFD700] focus:outline-none transition-colors" aria-label="Menü öffnen">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path id="menu-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div id="mobile-menu" class="fixed top-0 left-0 w-full h-auto bg-[rgba(10,10,10,0.95)] backdrop-blur-xl border-b border-[rgba(255,200,80,0.2)] z-[55] transform -translate-y-full transition-transform duration-500 ease-in-out lg:hidden shadow-2xl">
+      <div class="flex flex-col items-center justify-center pt-28 pb-12 gap-8 text-lg uppercase tracking-widest font-semibold text-white/90">
+        <a href="#start" class="mobile-link hover:text-[#FFD700] transition-colors">Start</a>
+        <a href="#leistungen" class="mobile-link hover:text-[#FFD700] transition-colors">Leistungen</a>
+        <a href="#beratung" class="mobile-link hover:text-[#FFD700] transition-colors">Beratung</a>
+        <a href="#tarife" class="mobile-link hover:text-[#FFD700] transition-colors">Tarife</a>
+        <a href="#ueber-uns" class="mobile-link hover:text-[#FFD700] transition-colors">Über uns</a>
+        <a href="#kontakt" class="mobile-link hover:text-[#FFD700] transition-colors">Kontakt</a>
+      </div>
+    </div>
+
+    <!-- Canvas Container (Sticky) -->
+    <div class="fixed top-0 left-0 w-full h-[100vh] z-0 overflow-hidden canvas-container bg-[#050505]">
+      <!-- 100vh sticky canvas centering and cover -->
+      <canvas id="lightbulb-canvas" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover"></canvas>
+      
+      <!-- Gradient overlay for flawless edge blending -->
+      <div class="absolute inset-0 pointer-events-none overlay-gradient"></div>
+    </div>
+
+    <!-- Scrollytelling Content -->
+    <main class="relative z-10 font-sans shadow-text text-white/95 leading-relaxed">
+      <!-- 6 Sections, expanding height so frames pan over it appropriately -->
+      <div class="scrolly-container max-w-7xl mx-auto px-6 md:px-12 w-full flex flex-col pt-[15vh]">
+        
+        <!-- SECTION 1: HERO (Start) -->
+        <section id="start" class="beat min-h-[100vh] flex flex-col justify-center items-start md:w-3/5">
+          <div class="glass-panel p-8 md:p-12 rounded-lg opacity-0 transform translate-y-10 transition-all duration-700 ease-out" data-beat="A">
+            <h1 class="text-5xl md:text-7xl font-serif text-[#FFD700] mb-4 leading-tight">Elektrotechnik mit Handschlagqualität.</h1>
+            <p class="text-xl md:text-2xl font-light mb-4 drop-shadow-md">Ihr konzessionierter Elektrofachbetrieb in Niederösterreich mit Einsatzgebiet in Wien und Umgebung.</p>
+            <p class="text-white/80 text-lg font-light mb-8 italic drop-shadow-md">Bei uns ist der Kunde noch immer König.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 mb-8">
+              <a href="#kontaktformular" class="bg-[#FFD700] text-[#050505] px-6 py-3 rounded-sm text-sm uppercase tracking-widest text-center font-bold hover:bg-white transition-colors">Jetzt anfragen</a>
+              <a href="#leistungen" class="border border-white/50 text-white hover:border-white px-6 py-3 rounded-sm text-sm uppercase tracking-widest text-center transition-colors drop-shadow-md">Leistungen ansehen</a>
+            </div>
+
+            <div class="border-t border-[rgba(255,200,80,0.3)] pt-6 space-y-2 text-sm text-white/90 drop-shadow-md">
+              <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#FFD700] shadow-[0_0_5px_#FFD700]"></span> Konzessionierter Fachbetrieb</p>
+              <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#FFD700] shadow-[0_0_5px_#FFD700]"></span> Einsatzgebiet Wien & Niederösterreich</p>
+              <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#FFD700] shadow-[0_0_5px_#FFD700]"></span> Kostenlose technische Beratung</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 2: LEISTUNGEN -->
+        <section id="leistungen" class="beat min-h-[100vh] flex flex-col justify-center items-end md:ml-auto md:w-2/3 text-right">
+          <div class="glass-panel p-8 md:p-12 rounded-lg opacity-0 transform translate-y-10 transition-all duration-700 ease-out relative" data-beat="B">
+            <!-- Seal of Quality Mascot -->
+            <img src="/Lampe1_neu.png" alt="Elektrofuzzy Maskottchen" class="absolute -top-12 -right-4 w-[120px] opacity-85 select-none pointer-events-none drop-shadow-lg" />
+            
+            <h2 class="text-4xl md:text-6xl font-serif text-[#FFD700] mb-6 drop-shadow-md">Unsere Leistungen</h2>
+            <p class="text-xl md:text-2xl font-light mb-8 drop-shadow-md text-white/95">Von klassischer Elektroinstallation bis zu modernen Photovoltaikanlagen übernehmen wir Arbeiten für Wohnungen, Häuser, Büros und Gewerbe.</p>
+            
+            <ul class="text-lg text-white/90 font-light mb-8 space-y-3 drop-shadow-md">
+              <li class="flex items-center justify-end gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[#FFD700]"></span> Haus-, Wohnungs- und Büroinstallationen</li>
+              <li class="flex items-center justify-end gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[#FFD700]"></span> EDV-Verkabelung bis CAT 7</li>
+              <li class="flex items-center justify-end gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[#FFD700]"></span> Gegensprechanlagen analog und digital</li>
+              <li class="flex items-center justify-end gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[#FFD700]"></span> Abspannungen für Hausanschlüsse</li>
+              <li class="flex items-center justify-end gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[#FFD700]"></span> Elektrische Verkabelungsarbeiten</li>
+              <li class="flex items-center justify-end gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[#FFD700]"></span> Wartung und Störungsdienst</li>
+              <li class="flex items-center justify-end gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[#FFD700]"></span> Photovoltaikanlagen</li>
+              <li class="flex items-center justify-end gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[#FFD700]"></span> Einschätzung bestehender Elektroanlagen</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- SECTION 3: BERATUNG -->
+        <section id="beratung" class="beat min-h-[100vh] flex flex-col justify-center items-start md:w-[60%]">
+          <div class="glass-panel p-8 md:p-12 rounded-lg opacity-0 transform translate-y-10 transition-all duration-700 ease-out" data-beat="C">
+            <h2 class="text-4xl md:text-6xl font-serif text-[#FFD700] mb-5 drop-shadow-md">Kostenlose technische Beratung</h2>
+            
+            <div class="space-y-4 text-white/95 text-lg font-light mb-6 drop-shadow-md">
+              <p>Sie sind sich nicht sicher, welche Lösung für Ihr Projekt sinnvoll ist?</p>
+              <p>Wir beraten Sie telefonisch oder schriftlich – unkompliziert und kostenlos.</p>
+              <p class="italic text-[#FFD700]">Diese Leistung ist selbstverständlich kostenlos.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2 mb-8 text-white/80 font-light text-sm drop-shadow-md">
+              <p class="flex items-center gap-2"><span class="w-1 h-1 bg-white/50 rounded-full"></span> Elektroinstallationen in Wohnungen und Häusern</p>
+              <p class="flex items-center gap-2"><span class="w-1 h-1 bg-white/50 rounded-full"></span> Gegensprechanlagen</p>
+              <p class="flex items-center gap-2"><span class="w-1 h-1 bg-white/50 rounded-full"></span> EDV-Verkabelung</p>
+              <p class="flex items-center gap-2"><span class="w-1 h-1 bg-white/50 rounded-full"></span> Störungen bestehender Elektroanlagen</p>
+              <p class="flex items-center gap-2"><span class="w-1 h-1 bg-white/50 rounded-full"></span> Planung neuer Installationen</p>
+              <p class="flex items-center gap-2"><span class="w-1 h-1 bg-white/50 rounded-full"></span> Photovoltaikanlagen</p>
+              <p class="flex items-center gap-2"><span class="w-1 h-1 bg-white/50 rounded-full"></span> Umbau bestehender Elektroanlagen</p>
+            </div>
+
+            <a href="#kontakt" class="border border-[#FFD700] text-[#FFD700] hover:bg-[#FFD700] hover:text-[#050505] px-6 py-3 rounded-sm text-sm uppercase tracking-widest inline-block transition-colors font-semibold">Jetzt Beratung anfragen</a>
+          </div>
+        </section>
+
+        <!-- SECTION 4: TARIFE -->
+        <section id="tarife" class="beat min-h-[100vh] flex flex-col justify-center items-end md:ml-auto md:w-[55%] text-right">
+          <div class="glass-panel p-8 md:p-12 rounded-lg opacity-0 transform translate-y-10 transition-all duration-700 ease-out" data-beat="D">
+            <h2 class="text-4xl md:text-6xl font-serif text-[#FFD700] mb-8 drop-shadow-md">Klare Tarife. Faire Preise.</h2>
+            
+            <div class="space-y-6 text-xl text-white/95 font-light mb-8 drop-shadow-md">
+              <div class="border-b border-[rgba(255,200,80,0.2)] pb-4">
+                <p class="uppercase tracking-widest text-[#FFD700] text-sm font-semibold mb-1">Störungsdienst</p>
+                <p>1/2 Stunde Techniker <br><span class="font-normal">€54 inkl MwSt</span></p>
+              </div>
+              
+              <div class="border-b border-[rgba(255,200,80,0.2)] pb-4">
+                <p class="uppercase tracking-widest text-[#FFD700] text-sm font-semibold mb-1">Anfahrt</p>
+                <p>Wien / Niederösterreich <br><span class="font-normal">€45 inkl MwSt</span></p>
+              </div>
+
+              <div>
+                <p class="uppercase tracking-widest text-[#FFD700] text-sm font-semibold mb-1">Elektrotechnische Überprüfung</p>
+                <p>Einfamilienhaus oder Wohnung <br><span class="font-normal">€180 inkl MwSt</span></p>
+              </div>
+            </div>
+
+            <div class="pt-4 drop-shadow-md italic text-white/80 font-light text-sm space-y-1">
+              <p>Kostenvoranschläge sind kostenlos und unverbindlich.</p>
+              <p>Projektbezogene Pauschalangebote möglich.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 5: ÜBER UNS -->
+        <section id="ueber-uns" class="beat min-h-[100vh] flex flex-col justify-center items-start w-full">
+          <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16 w-full glass-panel p-8 md:p-12 rounded-lg opacity-0 transform translate-y-10 transition-all duration-700 ease-out" data-beat="E">
+            
+            <div class="md:w-[60%]">
+              <h2 class="text-4xl md:text-6xl font-serif text-[#FFD700] mb-6 drop-shadow-md">Qualität & Verlässlichkeit</h2>
+              
+              <div class="space-y-4 text-lg text-white/95 font-light drop-shadow-md leading-relaxed">
+                <p>Elektrofuzzy ist ein konzessioniertes Unternehmen der Elektrotechnikbranche mit Firmensitz in Ravelsbach in Niederösterreich.</p>
+                <p>Ein großer Teil unserer Aufträge wird auch in Wien und Umgebung durchgeführt.</p>
+                <p>Wir arbeiten mit Qualitätsmaterial namhafter Großhändler wie SONEPAR, SCHRACK, DIALOG und ELITEC.</p>
+                <p>Unsere Arbeiten entsprechen dem aktuellen Stand der Technik und werden von erfahrenen Fachleuten sauber ausgeführt.</p>
+                <p class="font-normal text-[#FFD700]">Verlässlichkeit, ordentliche Umgangsformen und faire Preise sind für uns selbstverständlich.</p>
+              </div>
+            </div>
+
+            <div class="md:w-[40%] flex justify-center">
+              <img src="/Auto_neu.png" alt="Elektrofuzzy Servicefahrzeug" class="max-w-full w-[360px] object-contain drop-shadow-2xl transition-transform duration-500 hover:-translate-y-1" />
+            </div>
+
+          </div>
+        </section>
+
+        <!-- SECTION 6: KONTAKT -->
+        <section id="kontakt" class="beat min-h-[90vh] flex flex-col justify-center pb-[5vh] items-center text-center">
+          <div class="glass-panel p-8 md:p-12 rounded-lg opacity-0 transform translate-y-10 transition-all duration-700 ease-out overflow-hidden w-full max-w-4xl" data-beat="F">
+            <h2 class="text-4xl md:text-6xl font-serif text-[#FFD700] mb-4 drop-shadow-md">Kontakt</h2>
+            <p class="text-xl md:text-2xl text-white/95 font-light mb-8 drop-shadow-md">Schreiben Sie uns – wir melden uns verlässlich und zeitnah.</p>
+            
+            <div class="flex flex-col md:flex-row gap-12 text-left items-start justify-between">
+              <!-- Contact Details -->
+              <div class="space-y-6 text-lg text-white/90 font-light tracking-wide drop-shadow-md w-full md:w-1/3">
+                <div>
+                  <p class="text-[#FFD700] uppercase text-xs font-semibold tracking-widest mb-1">Geschäftsführer</p>
+                  <p>Herr Malik Günter</p>
+                </div>
+                
+                <div>
+                  <p class="text-[#FFD700] uppercase text-xs font-semibold tracking-widest mb-1">E-Mail</p>
+                  <a href="mailto:derelektrofuzzy@gmail.com" class="hover:text-white transition-colors text-white font-serif text-lg font-normal drop-shadow-md underline decoration-[rgba(255,200,80,0.4)]">derelektrofuzzy@gmail.com</a>
+                </div>
+                
+                <div>
+                  <p class="text-[#FFD700] uppercase text-xs font-semibold tracking-widest mb-1">Telefon</p>
+                  <a href="tel:06767056970" class="hover:text-white transition-colors text-white font-serif text-2xl font-normal drop-shadow-md">0676 / 70 569 70</a>
+                </div>
+
+                <div>
+                  <p class="text-[#FFD700] uppercase text-xs font-semibold tracking-widest mb-1">Adresse</p>
+                  <p>Gaindorf 68 <br>3720 Ravelsbach</p>
+                </div>
+
+                <div class="pt-4">
+                  <a href="https://wa.me/436767056970?text=Guten%20Tag%2C%20ich%20h%C3%A4tte%20eine%20Anfrage." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 bg-[#25D366] text-white px-6 py-3 rounded-sm text-sm uppercase tracking-widest font-bold hover:bg-[#20bd5a] transition-colors shadow-md w-full text-center">
+                    <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                    In WhatsApp schreiben
+                  </a>
+                </div>
+              </div>
+
+              <!-- Contact Form -->
+              <div id="kontaktformular" class="w-full md:w-2/3 border-t md:border-t-0 md:border-l border-[rgba(255,200,80,0.2)] pt-8 md:pt-0 md:pl-12">
+                <form class="flex flex-col gap-5 text-sm font-light text-left" onsubmit="event.preventDefault(); window.location.href='mailto:derelektrofuzzy@gmail.com';">
+                  
+                  <div class="flex flex-col">
+                    <label for="name" class="text-white/80 mb-2 font-semibold tracking-wide">Name</label>
+                    <input type="text" id="name" required class="bg-black/40 border border-[#D4AF37]/40 rounded-sm px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#FFD700] transition-colors" placeholder="Ihr Vor- und Nachname">
+                  </div>
+                  
+                  <div class="flex flex-col md:flex-row gap-5">
+                    <div class="flex flex-col flex-1">
+                      <label for="email" class="text-white/80 mb-2 font-semibold tracking-wide">E-Mail Adresse</label>
+                      <input type="email" id="email" required class="bg-black/40 border border-[#D4AF37]/40 rounded-sm px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#FFD700] transition-colors" placeholder="ihre@email.at">
+                    </div>
+                    <div class="flex flex-col flex-1">
+                      <label for="phone" class="text-white/80 mb-2 font-semibold tracking-wide">Telefon <span class="text-white/40 text-xs">(optional)</span></label>
+                      <input type="tel" id="phone" class="bg-black/40 border border-[#D4AF37]/40 rounded-sm px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#FFD700] transition-colors" placeholder="+43 6...">
+                    </div>
+                  </div>
+
+                  <div class="flex flex-col mt-2">
+                    <label for="message" class="text-white/80 mb-2 font-semibold tracking-wide">Ihre Nachricht</label>
+                    <textarea id="message" rows="4" required class="bg-black/40 border border-[#D4AF37]/40 rounded-sm px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#FFD700] transition-colors resize-none" placeholder="Wie können wir Ihnen weiterhelfen?"></textarea>
+                  </div>
+
+                  <button type="submit" class="mt-4 bg-[#FFD700] text-[#050505] px-8 py-3.5 rounded-sm text-sm uppercase tracking-widest font-bold hover:bg-white transition-colors shadow-md w-full md:w-auto self-start">Nachricht senden</button>
+
+                </form>
+              </div>
+
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
